@@ -7,7 +7,7 @@ import (
 	"text/template"
 	"time"
 
-	"gopl/ch4/github"
+	"github.com/linehk/gopl/ch4/github"
 )
 
 const templ = `{{.TotalCount}} issues:

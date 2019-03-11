@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch4/github"
+	"github.com/linehk/gopl/ch4/github"
 )
 
 func main() {
