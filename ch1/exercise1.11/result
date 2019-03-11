@@ -1,0 +1,101 @@
+Get http://googleusercontent.com: dial tcp: lookup googleusercontent.com: no such host
+Get http://exosrv.com: dial tcp: lookup exosrv.com: no such host
+0.12s      81 http://baidu.com
+0.12s   48858 http://cnblogs.com
+0.17s  689254 http://163.com
+0.18s  211409 http://sohu.com
+0.21s  140781 http://babytree.com
+0.22s    7943 http://tianya.cn
+0.22s    3213 http://google.cn
+0.22s  175895 http://xinhuanet.com
+Get http://pornhub.com: read tcp 192.168.6.61:53943->66.254.114.41:80: read: connection reset by peer
+0.31s   13899 http://login.tmall.com
+0.34s  569823 http://sina.com.cn
+0.34s   21638 http://alipay.com
+0.36s   37321 http://aliexpress.com
+0.37s  239404 http://qq.com
+0.38s  110692 http://jd.com
+0.39s  143052 http://taobao.com
+0.39s  498776 http://hao123.com
+0.39s  229074 http://tmall.com
+0.40s   73226 http://bilibili.com
+0.40s   74040 http://360.cn
+0.48s   14665 http://pages.tmall.com
+0.50s   44921 http://csdn.net
+0.55s    6117 http://weibo.com
+0.55s   28374 http://zhihu.com
+0.57s    3592 http://live.com
+0.61s   53646 http://apple.com
+0.78s  291304 http://fandom.com
+Get https://detail.tmall.com/?tbpm=3: stopped after 10 redirects
+0.96s  163590 http://microsoft.com
+0.98s   48233 http://linkedin.com
+1.01s    4055 http://imgur.com
+1.16s   79231 http://github.com
+1.38s  111156 http://bing.com
+Get http://wordpress.com: read tcp 192.168.6.61:54095->192.0.78.9:80: read: connection reset by peer
+Get http://xhamster.com: read tcp 192.168.6.61:53955->88.208.29.180:80: read: connection reset by peer
+1.58s  103390 http://ebay.com
+1.69s   75578 http://adobe.com
+1.82s   87379 http://office.com
+2.01s  191711 http://imdb.com
+2.07s   54547 http://msn.com
+2.18s    6400 http://amazon.com
+2.20s    5816 http://soso.com
+2.55s    6898 http://amazon.de
+2.64s    6808 http://amazon.in
+2.88s  174252 http://naver.com
+Get http://pixnet.net: read tcp 192.168.6.61:54158->103.23.108.107:80: read: connection reset by peer
+3.29s   22981 http://instructure.com
+3.42s   80548 http://paypal.com
+3.49s   18415 http://yahoo.co.jp
+3.81s  421375 http://booking.com
+4.07s  196529 http://livejasmin.com
+4.12s  285474 http://mail.ru
+4.33s   14548 http://popads.net
+5.14s  134277 http://okezone.com
+5.16s  261972 http://stackoverflow.com
+5.49s   60092 http://netflix.com
+5.86s    8845 http://vk.com
+6.58s   75889 http://wikipedia.org
+6.64s  189384 http://detik.com
+7.56s    6860 http://amazon.co.uk
+7.95s  186578 http://amazonaws.com
+9.23s 1894668 http://cnn.com
+Get https://yandex.ru/: net/http: TLS handshake timeout
+15.33s  525916 http://yahoo.com
+Get http://fbcdn.net: dial tcp: lookup fbcdn.net: no such host
+Get http://ok.ru: dial tcp 31.13.73.23:80: i/o timeout
+Get http://twitch.tv: dial tcp 243.185.187.39:80: i/o timeout
+Get http://google.com.br: dial tcp 69.171.244.15:80: i/o timeout
+Get http://porn555.com: dial tcp 31.13.66.6:80: i/o timeout
+Get http://google.co.jp: dial tcp 66.220.151.20:80: i/o timeout
+Get http://twitter.com: dial tcp 66.220.151.20:80: i/o timeout
+Get http://amazon.co.jp: dial tcp 208.101.60.87:80: i/o timeout
+Get http://facebook.com: dial tcp 46.82.174.68:80: i/o timeout
+Get http://google.de: dial tcp 31.13.72.1:80: i/o timeout
+Get http://google.ru: dial tcp 199.16.156.40:80: i/o timeout
+Get http://google.fr: dial tcp 69.63.184.14:80: i/o timeout
+Get http://tumblr.com: dial tcp 69.171.229.21:80: i/o timeout
+Get http://google.com.hk: dial tcp 69.63.184.142:80: i/o timeout
+Get http://google.com: dial tcp 172.217.25.14:80: i/o timeout
+Get http://pinterest.com: dial tcp 59.24.3.173:80: i/o timeout
+Get http://bbc.com: dial tcp 88.191.253.157:80: i/o timeout
+Get http://dropbox.com: dial tcp 69.63.176.59:80: i/o timeout
+Get http://google.co.uk: dial tcp 69.63.189.16:80: i/o timeout
+Get http://google.it: dial tcp 67.15.129.210:80: i/o timeout
+Get http://quora.com: dial tcp 69.63.180.173:80: i/o timeout
+Get http://google.es: dial tcp 31.13.80.1:80: i/o timeout
+Get http://bbc.co.uk: dial tcp 69.171.247.71:80: i/o timeout
+Get http://microsoftonline.com: dial tcp 52.178.167.109:80: i/o timeout
+Get http://instagram.com: dial tcp 59.24.3.173:80: i/o timeout
+Get http://blogspot.com: dial tcp 69.63.187.12:80: i/o timeout
+Get http://t.co: dial tcp 104.244.42.133:80: i/o timeout
+Get http://reddit.com: dial tcp 67.228.235.93:80: i/o timeout
+Get http://xvideos.com: dial tcp 31.13.77.55:80: i/o timeout
+Get http://tribunnews.com: dial tcp 180.240.134.85:80: i/o timeout
+Get http://google.co.in: dial tcp 75.126.124.162:80: i/o timeout
+Get http://youtube.com: dial tcp 203.98.7.65:80: i/o timeout
+Get http://whatsapp.com: dial tcp 69.63.178.13:80: i/o timeout
+Get http://thestartmagazine.com/: dial tcp 184.168.221.3:80: i/o timeout
+30.70s elapsed
