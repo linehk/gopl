@@ -6,33 +6,42 @@ import (
 	"os"
 	"time"
 
-	"gopl/ch4/github"
+	"github.com/linehk/gopl/ch4/github"
+)
+
+type class string
+
+const (
+	LTOM class = "less than one month"
+	MTOM class = "more than one month"
+	LTOY class = "less than one year"
+	MTOY class = "more than one year"
 )
 
 func main() {
-	date := os.Args[1]
-	result, err := github.SearchIssues(os.Args[2:])
+	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%d issues:\n", result.TotalCount)
+
+	issueClass := make(map[class][]github.Issue)
 	for _, item := range result.Items {
+		item := *item
 		y, m, _ := item.CreatedAt.Date()
-		ly, lm, _ := time.Now().Date()
-		if date == "LTAM" {
-			if lm-m <= time.Month(1) {
-				fmt.Printf("%v\n", item.CreatedAt)
-			}
+		cy, cm, _ := time.Now().Date()
+		switch {
+		case cm-m <= time.Month(1):
+			issueClass[LTOM] = append(issueClass[LTOM], item)
+		case cm-m > time.Month(1):
+			issueClass[MTOM] = append(issueClass[MTOM], item)
+		case cy-y <= 1:
+			issueClass[LTOY] = append(issueClass[LTOY], item)
+		case cy-y > 1:
+			issueClass[MTOY] = append(issueClass[MTOY], item)
 		}
-		if date == "LTAY" {
-			if ly-y <= 1 {
-				fmt.Printf("%v\n", item.CreatedAt)
-			}
-		}
-		if date == "MTOY" {
-			if ly-y >= 1 {
-				fmt.Printf("%v\n", item.CreatedAt)
-			}
-		}
+	}
+
+	for class, issues := range issueClass {
+		fmt.Printf("class: %s, issues: %v\n", class, issues)
 	}
 }
