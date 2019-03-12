@@ -7,35 +7,27 @@ import (
 	"golang.org/x/net/html"
 )
 
-var s []string
-var count = make(map[string]int)
-
 func main() {
 	doc, err := html.Parse(os.Stdin)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "outline: %v\n", err)
+		fmt.Fprintf(os.Stderr, "html parse: %v\n", err)
+		os.Exit(1)
 	}
-	outline(nil, doc)
-	countSameElement(s)
-	for k, v := range count {
-		fmt.Printf("%s = %d\n", k, v)
+
+	visit(doc)
+
+	for t, c := range count {
+		fmt.Println(t, c)
 	}
 }
 
-func outline(stack []string, n *html.Node) {
+var count = make(map[string]int)
+
+func visit(n *html.Node) {
 	if n.Type == html.ElementNode {
-		stack = append(stack, n.Data)
-		for _, k := range stack {
-			s = append(s, k)
-		}
+		count[n.Data]++
 	}
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
-		outline(stack, c)
-	}
-}
-
-func countSameElement(element []string) {
-	for _, v := range element {
-		count[v]++
+		visit(c)
 	}
 }
