@@ -14,7 +14,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	links, imgs, scripts, styles := visit(nil, nil, nil, nil, doc)
+	visit(doc)
 
 	fmt.Println(links)
 	fmt.Println(imgs)
@@ -22,44 +22,47 @@ func main() {
 	fmt.Println(styles)
 }
 
-// visit appends to links each link found in n and returns the result.
-func visit(links []string, imgs []string, scripts []string, styles []string, n *html.Node) ([]string, []string, []string, []string) {
-	if n.Type == html.ElementNode {
-		if n.Data == "a" {
-			for _, a := range n.Attr {
-				if a.Key == "href" {
-					links = append(links, a.Val)
-				}
+var (
+	links   []string
+	imgs    []string
+	scripts []string
+	styles  []string
+)
+
+func visit(n *html.Node) {
+	if n.Type != html.ElementNode {
+		goto LOOP
+	}
+
+	switch n.Data {
+	case "a":
+		for _, a := range n.Attr {
+			if a.Key == "href" {
+				links = append(links, a.Val)
 			}
 		}
-
-		if n.Data == "img" {
-			for _, s := range n.Attr {
-				if s.Key == "src" {
-					imgs = append(imgs, s.Val)
-				}
+	case "img":
+		for _, s := range n.Attr {
+			if s.Key == "src" {
+				imgs = append(imgs, s.Val)
 			}
 		}
-
-		if n.Data == "script" {
-			for _, s := range n.Attr {
-				if s.Key == "src" {
-					scripts = append(scripts, s.Val)
-				}
+	case "script":
+		for _, s := range n.Attr {
+			if s.Key == "src" {
+				scripts = append(scripts, s.Val)
 			}
 		}
-
-		if n.Data == "link" {
-			for _, m := range n.Attr {
-				if m.Key == "media" {
-					styles = append(styles, m.Val)
-				}
+	case "link":
+		for _, m := range n.Attr {
+			if m.Key == "media" {
+				styles = append(styles, m.Val)
 			}
 		}
 	}
 
+LOOP:
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
-		links, imgs, scripts, styles = visit(links, imgs, scripts, styles, c)
+		visit(c)
 	}
-	return links, imgs, scripts, styles
 }
