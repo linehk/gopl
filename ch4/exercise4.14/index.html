@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Search</title>
+</head>
+<body>
+<h1>{{.TotalCount}} issues:</h1>
+<table>
+    <tr style="text-align: left">
+        <th>Title</th>
+        <th>User</th>
+        <th>Milestone</th>
+        <th>Description</th>
+    </tr>
+    {{range .Items}}
+    <tr>
+        <td>{{.Title}}</td>
+        <td>{{.User.Login}}</td>
+        <td>{{.Milestone.Title}}</td>
+        <td>{{.Milestone.Description}}</td>
+    </tr>
+    {{end}}
+</table>
+</body>
+</html>
