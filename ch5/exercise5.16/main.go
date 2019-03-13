@@ -2,17 +2,29 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
 	fmt.Println(join("aaa", "bbb", "ccc", "|"))
 }
 
-func join(stringVals ...string) string {
-	sep := stringVals[len(stringVals)-1]
-	var joinString string
-	for i := 0; i < len(stringVals)-1; i++ {
-		joinString += stringVals[i] + sep
+func join(strs ...string) string {
+	if len(strs) < 2 {
+		return ""
 	}
-	return joinString
+
+	sep := strs[len(strs)-1]
+	last := strs[len(strs)-2]
+	// 为了不改变输入
+	tempStrs := strs[:len(strs)-2]
+
+	var b strings.Builder
+	for _, s := range tempStrs {
+		b.WriteString(s)
+		b.WriteString(sep)
+	}
+	b.WriteString(last)
+
+	return b.String()
 }
