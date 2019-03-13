@@ -2,63 +2,80 @@ package main
 
 import (
 	"fmt"
+	"log"
+
+	"github.com/pkg/errors"
 )
 
 func main() {
+	input := []int{0, 1, 2, 3, 4}
+	first := input[0]
+	left := input[1:]
+	// 1. max
+	m, err := max(input...)
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Printf("max: %d\n", m)
+
+	// 2. min
+	m, err = min(input...)
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Printf("min: %d\n", m)
+
+	// 3. mustMax
+	m = mustMax(first, left...)
+	fmt.Printf("mustMax: %d\n", m)
+
+	// 4. mustMin
+	m = mustMin(first, left...)
+	fmt.Printf("mustMin: %d\n", m)
 }
 
-func max(vals ...int) (int, bool) {
+func max(vals ...int) (int, error) {
 	if len(vals) == 0 {
-		fmt.Println("no arg!")
-		return 0, false
+		return 0, errors.New("must have at least one argument!")
 	}
 	max := vals[0]
-	for _, i := range vals {
-		if i > max {
-			max = i
+	for _, v := range vals {
+		if v > max {
+			max = v
 		}
 	}
-	return max, true
+	return max, nil
 }
 
-func min(vals ...int) (int, bool) {
+func min(vals ...int) (int, error) {
 	if len(vals) == 0 {
-		fmt.Println("no arg!")
-		return 0, false
+		return 0, errors.New("must have at least one argument!")
 	}
 	min := vals[0]
-	for _, i := range vals {
-		if i < min {
-			min = i
+	for _, v := range vals {
+		if v < min {
+			min = v
 		}
 	}
-	return min, true
+	return min, nil
 }
 
-func atLeastMax(vals ...int) (int, bool) {
-	if len(vals) < 1 {
-		fmt.Println("no enough args!")
-		return 0, false
-	}
-	max := vals[0]
-	for _, i := range vals {
-		if i > max {
-			max = i
+func mustMax(first int, vals ...int) int {
+	max := first
+	for _, v := range vals {
+		if v > max {
+			max = v
 		}
 	}
-	return max, true
+	return max
 }
 
-func atLeastMin(vals ...int) (int, bool) {
-	if len(vals) < 1 {
-		fmt.Println("no enough args!")
-		return 0, false
-	}
-	min := vals[0]
-	for _, i := range vals {
-		if i < min {
-			min = i
+func mustMin(first int, vals ...int) int {
+	min := first
+	for _, v := range vals {
+		if v < min {
+			min = v
 		}
 	}
-	return min, true
+	return min
 }
