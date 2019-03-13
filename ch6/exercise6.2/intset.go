@@ -59,9 +59,9 @@ func (s *IntSet) String() string {
 	return buf.String()
 }
 
-func (s *IntSet) AddAll(vals ...int) {
-	for _, v := range vals {
-		word, bit := v/64, uint(v%64)
+func (s *IntSet) AddAll(ints ...int) {
+	for _, x := range ints {
+		word, bit := x/64, uint(x%64)
 		for word >= len(s.words) {
 			s.words = append(s.words, 0)
 		}
