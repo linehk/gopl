@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch5/links"
+	"github.com/linehk/gopl/ch5/links"
 )
 
 // breadthFirst calls f for each item in the worklist.
