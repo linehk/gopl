@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track</title>
+</head>
+<body>
+<table>
+    <tr style="text-align: left">
+        <th><a href="/title">Title</a></th>
+        <th><a href="/artist">Artist</a></th>
+        <th><a href="/album">Album</a></th>
+        <th><a href="/year">Year</a></th>
+        <th><a href="/length">Length</a></th>
+    </tr>
+    {{range .}}
+    <tr>
+        <td>{{.Title}}</td>
+        <td>{{.Artist}}</td>
+        <td>{{.Album}}</td>
+        <td>{{.Year}}</td>
+        <td>{{.Length}}</td>
+    </tr>
+    {{end}}
+</table>
+</body>
+</html>
