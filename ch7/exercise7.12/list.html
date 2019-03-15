@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<table>
+    <tr style="text-align: left">
+        <th>Item</th>
+        <th>Price</th>
+    </tr>
+    {{range $item, $price := .}}
+    <tr>
+        <td>{{$item}}</td>
+        <td>{{$price}}</td>
+    </tr>
+    {{end}}
+</table>
+</body>
+</html>
