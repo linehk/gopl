@@ -8,7 +8,7 @@ import (
 	"math"
 	"net/http"
 
-	"gopl/ch7/eval"
+	"github.com/linehk/gopl/ch7/eval"
 )
 
 // -- copied from gopl/ch3/surface --
