@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form method="post" action="/calc">
+    <p>Expr: </p><textarea name="expr"></textarea>
+    <p>Env: </p><textarea name="env"></textarea>
+    <input type="submit" value="Calculate">
+</form>
+<p>Result: {{.}}</p>
+</body>
+</html>
