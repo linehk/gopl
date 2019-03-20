@@ -18,7 +18,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch8/thumbnail"
+	"github.com/linehk/gopl/ch8/thumbnail/thumbnail"
 )
 
 func main() {

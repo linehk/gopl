@@ -1,13 +1,11 @@
-package cake_test
+package cake
 
 import (
 	"testing"
 	"time"
-
-	"gopl/ch8/cake"
 )
 
-var defaults = cake.Shop{
+var defaults = Shop{
 	Verbose:      testing.Verbose(),
 	Cakes:        20,
 	BakeTime:     10 * time.Millisecond,

@@ -11,7 +11,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch5/links"
+	"github.com/linehk/gopl/ch5/links"
 )
 
 func crawl(url string) []string {

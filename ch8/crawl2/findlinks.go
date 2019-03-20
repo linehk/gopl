@@ -9,7 +9,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch5/links"
+	"github.com/linehk/gopl/ch5/links"
 )
 
 // tokens is a counting semaphore used to

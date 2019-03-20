@@ -1,20 +1,18 @@
 // This file is just a place to put example code from the book.
 // It does not actually run any code in gopl/ch8/thumbnail.
 
-package thumbnail_test
+package thumbnail
 
 import (
 	"log"
 	"os"
 	"sync"
-
-	"gopl/ch8/thumbnail"
 )
 
 // makeThumbnails makes thumbnails of the specified files.
 func makeThumbnails(finenames []string) {
 	for _, f := range finenames {
-		if _, err := thumbnail.ImageFile(f); err != nil {
+		if _, err := ImageFile(f); err != nil {
 			log.Println(err)
 		}
 	}
@@ -23,7 +21,7 @@ func makeThumbnails(finenames []string) {
 // NOTE: incorrect!
 func makeThumbnails2(filenames []string) {
 	for _, f := range filenames {
-		go thumbnail.ImageFile(f) // NOTE: ignoring errors
+		go ImageFile(f) // NOTE: ignoring errors
 	}
 }
 
@@ -32,7 +30,7 @@ func makeThumbnails3(filenames []string) {
 	ch := make(chan struct{})
 	for _, f := range filenames {
 		go func(f string) {
-			thumbnail.ImageFile(f) // NOTE: ignoring errors
+			ImageFile(f) // NOTE: ignoring errors
 			ch <- struct{}{}
 		}(f)
 	}
@@ -50,7 +48,7 @@ func makeThumbnails4(filenames []string) error {
 
 	for _, f := range filenames {
 		go func(f string) {
-			_, err := thumbnail.ImageFile(f)
+			_, err := ImageFile(f)
 			errors <- err
 		}(f)
 	}
@@ -77,7 +75,7 @@ func makeThumbnails5(filenames []string) (thumbfiles []string, err error) {
 	for _, f := range filenames {
 		go func(f string) {
 			var it item
-			it.thumbfile, it.err = thumbnail.ImageFile(f)
+			it.thumbfile, it.err = ImageFile(f)
 			ch <- it
 		}(f)
 	}
