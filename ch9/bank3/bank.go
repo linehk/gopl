@@ -82,7 +82,7 @@ var mu sync.RWMutex
 var balance int
 func Balance() int {
 	mu.RLock() // readers lock
-	default mu.RUnlock()
+	defer mu.RUnlock()
 	return balance
 }
 */
