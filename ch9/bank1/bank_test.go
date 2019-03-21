@@ -1,10 +1,8 @@
-package bank_test
+package bank
 
 import (
 	"fmt"
 	"testing"
-
-	"gopl/ch9/bank1"
 )
 
 func TestBank(t *testing.T) {
@@ -12,14 +10,14 @@ func TestBank(t *testing.T) {
 
 	// Alice
 	go func() {
-		bank.Deposit(200)
-		fmt.Println("=", bank.Balance())
+		Deposit(200)
+		fmt.Println("=", Balance())
 		done <- struct{}{}
 	}()
 
 	// Bob
 	go func() {
-		bank.Deposit(100)
+		Deposit(100)
 		done <- struct{}{}
 	}()
 
@@ -27,7 +25,7 @@ func TestBank(t *testing.T) {
 	<-done
 	<-done
 
-	if got, want := bank.Balance(), 300; got != want {
+	if got, want := Balance(), 300; got != want {
 		t.Errorf("Balance = %d, want %d", got, want)
 	}
 }

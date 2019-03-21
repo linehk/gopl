@@ -1,10 +1,8 @@
-package bank_test
+package bank
 
 import (
 	"sync"
 	"testing"
-
-	"gopl/ch9/bank3"
 )
 
 func TestBank(t *testing.T) {
@@ -13,13 +11,13 @@ func TestBank(t *testing.T) {
 	for i := 1; i <= 1000; i++ {
 		n.Add(1)
 		go func(amount int) {
-			bank.Deposit(amount)
+			Deposit(amount)
 			n.Done()
 		}(i)
 	}
 	n.Wait()
 
-	if got, want := bank.Balance(), (1000+1)*1000/2; got != want {
+	if got, want := Balance(), (1000+1)*1000/2; got != want {
 		t.Errorf("Balance = %d, want %d", got, want)
 	}
 }
