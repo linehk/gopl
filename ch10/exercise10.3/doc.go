@@ -1,8 +1,7 @@
+package doc
+
+// http://gopl.io/ch1/helloworld?go-get=1
 /*
-http://gopl.io/ch1/helloworld?go-get=1
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +12,4 @@ http://gopl.io/ch1/helloworld?go-get=1
 </body>
 </html>
 */
-
-package main
-
-func main() {
-}
+// 真实的地址是 https://github.com/adonovan/gopl.io
