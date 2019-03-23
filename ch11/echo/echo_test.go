@@ -1,5 +1,4 @@
 // Test of echo command. Run with: go test gopl/ch11/echo
-
 package main
 
 import (
