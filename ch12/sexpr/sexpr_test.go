@@ -10,11 +10,9 @@ import (
 //
 // The test does not make direct assertions about the encoded output
 // because the output depends on map iteration order, which is
-// nondeterministic.  The output of the t.Log statements can be
+// nondeterministic. The output of the t.Log statements can be
 // inspected by running the test with the -v flag:
-//
-// 	$ go test -v gopl/ch12/sexpr
-//
+// go test -v github.com/linehk/gopl/ch12/sexpr
 func Test(t *testing.T) {
 	type Movie struct {
 		Title, Subtitle string

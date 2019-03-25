@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"gopl/ch12/params"
+	"github.com/linehk/gopl/ch12/params"
 )
 
 // search implements the /search URL endpoint.
