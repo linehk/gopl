@@ -89,12 +89,12 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 
 	case reflect.Float32, reflect.Float64:
 		// 浮点数编码为 Go 语言的格式
-		fmt.Fprintf(buf, "%f", v.Float())
+		fmt.Fprintf(buf, "%g", v.Float())
 
 	case reflect.Complex64, reflect.Complex128:
 		// 复数 1+2i 编码为 #C(1.0 2.0) 格式
 		c := v.Complex()
-		fmt.Fprintf(buf, "#C(%f %f)", real(c), imag(c))
+		fmt.Fprintf(buf, "#C(%g %g)", real(c), imag(c))
 
 	case reflect.Interface:
 		// 接口编码为类型名和值对 ("[]int" (1 2 3))

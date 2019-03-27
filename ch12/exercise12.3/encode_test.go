@@ -29,8 +29,8 @@ func TestFloat(t *testing.T) {
 		v    float64
 		want string
 	}{
-		{3.14, fmt.Sprintf("%f", 3.14)},
-		{0, fmt.Sprintf("%f", 0.0)},
+		{3.14, fmt.Sprintf("%g", 3.14)},
+		{0, fmt.Sprintf("%g", 0.0)},
 	}
 	for i, tt := range tests {
 		got, err := Marshal(tt.v)
@@ -48,9 +48,9 @@ func TestComplex(t *testing.T) {
 		v    complex128
 		want string
 	}{
-		{1 + 2i, "#C(1.000000 2.000000)"},
-		{0 + 2i, "#C(0.000000 2.000000)"},
-		{1 + 0i, "#C(1.000000 0.000000)"},
+		{1 + 2i, "#C(1 2)"},
+		{0 + 2i, "#C(0 2)"},
+		{1 + 0i, "#C(1 0)"},
 	}
 	for i, tt := range tests {
 		got, err := Marshal(tt.v)
