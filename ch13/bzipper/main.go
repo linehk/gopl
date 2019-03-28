@@ -1,5 +1,3 @@
-// https://godoc.org/github.com/chai2010/bzip2
-
 // Bzipper reads input, bzip2-compresses it, and writes it out.
 package main
 
@@ -8,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"gopl/ch13/bzip"
+	"github.com/linehk/gopl/ch13/bzip"
 )
 
 func main() {

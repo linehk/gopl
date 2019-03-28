@@ -1,34 +1,23 @@
-// https://godoc.org/github.com/chai2010/bzip2
-
-// The version of this program that appeared in the first and second
-// printings did not comply with the proposed rules for passing
-// pointers between Go and C, described here:
-// https://github.com/golang/proposal/blob/master/design/12416-cgo-pointers.md
-//
-// The rules forbid a C function like bz2compress from storing 'in'
-// and 'out' (pointers to variables allocated by Go) into the Go
-// variable 's', even temporarily.
-//
-// The version below, which appears in the third printing, has been
-// corrected.  To comply with the rules, the bz_stream variable must
-// be allocated by C code.  We have introduced two C functions,
-// bz2alloc and bz2free, to allocate and free instances of the
-// bz_stream type.  Also, we have changed bz2compress so that before
-// it returns, it clears the fields of the bz_stream that contain
-// pointers to Go variables.
-
 // Package bzip provides a writer that uses bzip2 compression (bzip.org).
 package bzip
 
 /*
 #cgo CFLAGS: -I/usr/include
 #cgo LDFLAGS: -L/usr/lib -lbz2
+
 #include <bzlib.h>
 #include <stdlib.h>
-bz_stream* bz2alloc() { return calloc(1, sizeof(bz_stream)); }
+
+bz_stream* bz2alloc() {
+	return calloc(1, sizeof(bz_stream));
+}
+
 int bz2compress(bz_stream *s, int action,
                 char *in, unsigned *inlen, char *out, unsigned *outlen);
-void bz2free(bz_stream* s) { free(s); }
+
+void bz2free(bz_stream* s) {
+	free(s);
+}
 */
 import "C"
 

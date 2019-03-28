@@ -14,8 +14,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 		return false
 	}
 
-	// ... cycle check omitted (shown later)...
-
 	// cycle check
 	if x.CanAddr() && y.CanAddr() {
 		xptr := unsafe.Pointer(x.UnsafeAddr())
@@ -35,8 +33,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 
 	case reflect.String:
 		return x.String() == y.String()
-
-	/// ...numeric cases omitted for brevity...
 
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32,
 		reflect.Int64:
@@ -69,7 +65,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 		}
 		return true
 
-	// ... struct and map cases omitted for brevity...
 	case reflect.Struct:
 		for i, n := 0, x.NumField(); i < n; i++ {
 			if !equal(x.Field(i), y.Field(i), seen) {
@@ -93,7 +88,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 }
 
 // Equal reports whether x and y deeply equal.
-
 // Map keys are always compared with ==, not deeply.
 // (This matter for keys containing pointers or interfaces.)
 func Equal(x, y interface{}) bool {

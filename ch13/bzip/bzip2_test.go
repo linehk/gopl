@@ -1,5 +1,3 @@
-// https://godoc.org/github.com/chai2010/bzip2
-
 package bzip_test
 
 import (
@@ -8,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	"gopl/ch13/bzip" // writer
+	"github.com/linehk/gopl/ch13/bzip" // writer
 )
 
 func TestBzip2(t *testing.T) {
