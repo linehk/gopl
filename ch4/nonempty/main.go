@@ -25,7 +25,7 @@ func main() {
 }
 
 func nonempty2(strings []string) []string {
-	out := strings[:0] // out := strings[:]
+	out := strings[:0]
 	for _, s := range strings {
 		if s != "" {
 			out = append(out, s)

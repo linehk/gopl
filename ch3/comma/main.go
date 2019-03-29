@@ -1,13 +1,4 @@
-/*
-Comma prints its argument numbers with a comma at each power of 1000.
-Example:
-	go run main 1 12 123 1234 1234567890
-	1
-	12
-	123
-	1,234
-	1,234,567,890
-*/
+// Comma prints its argument numbers with a comma at each power of 1000.
 package main
 
 import (

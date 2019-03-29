@@ -25,7 +25,7 @@ func main() {
 			img.Set(px, py, sqrt(z))
 		}
 	}
-	png.Encode(os.Stdout, img) // NOTE: igoring errors
+	png.Encode(os.Stdout, img) // NOTE: ignoring errors
 }
 
 func mandelbrot(z complex128) color.Color {
@@ -42,8 +42,6 @@ func mandelbrot(z complex128) color.Color {
 	return color.Black
 }
 
-// Some other interesting functions.
-
 func acos(z complex128) color.Color {
 	v := cmplx.Acos(z)
 	blue := uint8(real(v)*128) + 127
@@ -58,12 +56,6 @@ func sqrt(z complex128) color.Color {
 	return color.YCbCr{128, blue, red}
 }
 
-/*
-f(x) = x^4 - 1
-z' = z - f(z)/f'(z)
-   = z - (z^4 - 1) / (4 * z^3)
-   = z - (z - 1/z^3) / 4
-*/
 func newton(z complex128) color.Color {
 	const iterations = 37
 	const contrast = 7

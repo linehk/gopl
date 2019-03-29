@@ -7,7 +7,7 @@ import (
 
 // Format formats an expression as a string.
 // It does not attempt to remove unnecessary parens.
-func Foramt(e Expr) string {
+func Format(e Expr) string {
 	var buf bytes.Buffer
 	write(&buf, e)
 	return buf.String()

@@ -25,15 +25,9 @@ func main() {
 			img.Set(px, py, newton(z))
 		}
 	}
-	png.Encode(os.Stdout, img) // NOTE: igoring errors
+	png.Encode(os.Stdout, img) // NOTE: ignoring errors
 }
 
-/*
-f(x) = x^4 - 1
-z' = z - f(z)/f'(z)
-   = z - (z^4 - 1) / (4 * z^3)
-   = z - (z - 1/z^3) / 4
-*/
 func newton(z complex128) color.Color {
 	const iterations = 37
 	const contrast = 7

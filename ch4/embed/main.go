@@ -1,4 +1,4 @@
-// Embed demonstrates basic struct embeding.
+// Embed demonstrates basic struct embedding.
 package main
 
 import (

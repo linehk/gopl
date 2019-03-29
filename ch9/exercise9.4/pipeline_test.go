@@ -36,11 +36,6 @@ func BenchmarkPipeline1048576(b *testing.B) {
 	bench(b, 1048576)
 }
 
-// 在 macOS 的活动监视器跑到 20G 我就关闭了
-//func BenchmarkPipeline1073741824(b *testing.B) {
-//	bench(b, 1073741824)
-//}
-
 // 5G
 func BenchmarkPipeline2097152(b *testing.B) {
 	bench(b, 2097152)

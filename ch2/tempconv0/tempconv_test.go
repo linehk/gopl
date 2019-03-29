@@ -1,6 +1,8 @@
 package tempconv
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func Example_one() {
 	{

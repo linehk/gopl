@@ -1,13 +1,14 @@
 package archive_test
 
 import (
-	"github.com/linehk/gopl/ch10/exercise10.2/archive"
-	_ "github.com/linehk/gopl/ch10/exercise10.2/archive/tar"
-	_ "github.com/linehk/gopl/ch10/exercise10.2/archive/zip"
 	"log"
 	"os"
 	"sort"
 	"testing"
+
+	"github.com/linehk/gopl/ch10/exercise10.2/archive"
+	_ "github.com/linehk/gopl/ch10/exercise10.2/archive/tar"
+	_ "github.com/linehk/gopl/ch10/exercise10.2/archive/zip"
 )
 
 func TestTar(t *testing.T) {

@@ -12,7 +12,7 @@ func main() {
 	for input.Scan() {
 		fmt.Println(basename(input.Text()))
 	}
-	// NOTE: igoring potential errors from input.Err()
+	// NOTE: ignoring potential errors from input.Err()
 }
 
 // basename removes directory components and a .suffix.

@@ -66,6 +66,7 @@ func handleConn(conn net.Conn) {
 	conn.Close()
 }
 
+// 另一个版本
 /*
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages

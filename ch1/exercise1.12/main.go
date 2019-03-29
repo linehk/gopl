@@ -29,13 +29,9 @@ const (
 func main() {
 	// The sequence of image is deterministic unless we seed
 	// the pseudo-random number generator using the current time.
-	// Thanks to Randall McPherson for pointing out the omission.
 	rand.Seed(time.Now().UTC().UnixNano())
 
 	http.HandleFunc("/", handler)
-	//http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-	//	lissajous(w)
-	//})
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 

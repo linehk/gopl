@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// cat in.html|go run main.go id=p3
+// cat in.html | go run main.go id=p3
 func main() {
 	dec := xml.NewDecoder(os.Stdin)
 	var stack []string // stack of element names
@@ -44,9 +44,9 @@ func main() {
 func toSlice(stack []string, attrs []map[string]string) []string {
 	var result []string
 	for i, name := range stack {
-		// 1.
+		// 1
 		result = append(result, name)
-		// 2.
+		// 2
 		for attr, value := range attrs[i] {
 			result = append(result, attr+"="+value)
 		}

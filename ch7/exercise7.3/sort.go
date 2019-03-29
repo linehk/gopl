@@ -58,16 +58,16 @@ func (t *tree) String() string {
 	return s
 }
 
-//func (t *tree) Values() []int {
-//	var vals []int
+// func (t *tree) Values() []int {
+// 	var vals []int
 //
-//	if t == nil {
-//		return vals
-//	}
+// 	if t == nil {
+// 		return vals
+// 	}
 //
-//	vals = append(vals, t.left.Values()...)
-//	vals = append(vals, t.value)
-//	vals = append(vals, t.right.Values()...)
+// 	vals = append(vals, t.left.Values()...)
+// 	vals = append(vals, t.value)
+// 	vals = append(vals, t.right.Values()...)
 //
-//	return vals
-//}
+// 	return vals
+// }

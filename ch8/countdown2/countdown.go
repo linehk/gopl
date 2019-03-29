@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	/// ...create abort channel...
+	// ...create abort channel...
 	abort := make(chan struct{})
 	go func() {
 		os.Stdin.Read(make([]byte, 1)) // read a single byte

@@ -15,7 +15,7 @@ type Var string
 // A literal is a numeric constant, e.g., 3.141.
 type literal float64
 
-// A unary represents a unary operatorexpression, e.g., -x.
+// A unary represents a unary operator expression, e.g., -x.
 type unary struct {
 	op rune // one of '+', '-'
 	x  Expr

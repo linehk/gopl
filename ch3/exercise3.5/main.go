@@ -25,7 +25,7 @@ func main() {
 			img.Set(px, py, acos(z))
 		}
 	}
-	png.Encode(os.Stdout, img) // NOTE: igoring errors
+	png.Encode(os.Stdout, img) // NOTE: ignoring errors
 }
 
 func acos(z complex128) color.Color {

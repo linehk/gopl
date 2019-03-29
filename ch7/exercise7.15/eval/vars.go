@@ -1,6 +1,5 @@
-package eval
-
 // 返回计算表达式所需的变量
+package eval
 
 func (v Var) Vars() []Var {
 	return []Var{v}

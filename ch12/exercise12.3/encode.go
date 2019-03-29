@@ -101,7 +101,6 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 		if v.IsNil() {
 			fmt.Fprintf(buf, "nil")
 		} else {
-			//fmt.Fprintf(buf, "aaaaaaa")
 			fmt.Fprintf(buf, "(%q ", v.Elem().Type())
 			encode(buf, v.Elem())
 			buf.WriteByte(')')

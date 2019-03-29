@@ -11,7 +11,6 @@ import (
 	"golang.org/x/net/html"
 )
 
-// Copied from gopl.io/ch5/outline2.
 func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	if pre != nil {
 		pre(n)
@@ -41,7 +40,6 @@ func title(url string) error {
 		return fmt.Errorf("parsing %s as HTML: %v", url, err)
 	}
 
-	// ...print doc's title element...
 	visitNode := func(n *html.Node) {
 		if n.Type == html.ElementNode && n.Data == "title" &&
 			n.FirstChild != nil {

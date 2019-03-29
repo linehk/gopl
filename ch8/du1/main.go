@@ -1,6 +1,9 @@
 // The du1 command computes the disk usage of the files in a directory.
 package main
 
+// The du1 variant uses two goroutines and
+// prints the total after every file is found.
+
 import (
 	"flag"
 	"fmt"
@@ -61,6 +64,3 @@ func dirents(dir string) []os.FileInfo {
 	}
 	return entries
 }
-
-// The du1 variant uses two goroutines and
-// prints the total after every file is found.

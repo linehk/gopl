@@ -106,8 +106,6 @@ func dirents(dir string) []os.FileInfo {
 	}
 	defer func() { <-sema }() // release token
 
-	// ...read directory...
-
 	f, err := os.Open(dir)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "du: %v\n", err)

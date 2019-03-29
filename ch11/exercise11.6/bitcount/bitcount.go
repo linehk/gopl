@@ -1,8 +1,7 @@
 package bitcount
 
 func BitCount(x uint64) int {
-	// Hacker's Delight
-	// 算法心得：高效算法的奥秘
+	// 算法心得：高效算法的奥秘，第五章
 	x = x - ((x >> 1) & 0x5555555555555555)
 	x = (x & 0x3333333333333333) + ((x >> 2) & 0x3333333333333333)
 	x = (x + (x >> 4)) & 0x0f0f0f0f0f0f0f0f

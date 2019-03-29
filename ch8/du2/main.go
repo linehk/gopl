@@ -16,8 +16,6 @@ import (
 var verbose = flag.Bool("v", false, "show verbose progress messages")
 
 func main() {
-	// ...start background goroutine...
-
 	// Determine the initial directories.
 	flag.Parse()
 	roots := flag.Args()

@@ -18,8 +18,6 @@ import (
 var vFlag = flag.Bool("v", false, "show verbose progress messages")
 
 func main() {
-	// ...determine roots...
-
 	flag.Parse()
 
 	// Determine the initial directories.
@@ -61,8 +59,6 @@ loop:
 	}
 
 	printDiskUsage(nfiles, nbytes) // final totals
-
-	// ...select loop...
 }
 
 func printDiskUsage(nfiles, nbytes int64) {

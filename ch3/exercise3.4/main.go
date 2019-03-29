@@ -9,7 +9,7 @@ import (
 	"strconv"
 )
 
-//var width, height = 600,320
+// var width, height = 600,320
 var (
 	width, height = 600, 320
 	xyscale       = width / 2 / xyrange

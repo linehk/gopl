@@ -26,7 +26,7 @@ func main() {
 	fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 }
 
-// 获取 n 个 URL
+// getSomeURL 获取 n 个 URL
 func getSomeURL(n int) []string {
 	f, err := os.Open("top-1m.csv")
 	if err != nil {

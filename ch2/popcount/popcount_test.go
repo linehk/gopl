@@ -59,14 +59,11 @@ func BenchmarkPopCountByShifting(b *testing.B) {
 }
 
 /*
-go test -cpu=8 -bench=.
 goos: darwin
 goarch: amd64
-pkg: github.com/linehk/BookCode/TheGoProgrammingLanguage/ch2/popcount
-BenchmarkPopCount-8             	2000000000	         0.61 ns/op
-BenchmarkBitCount-8             	2000000000	         0.31 ns/op
-BenchmarkPopCountByClearing-8   	100000000	        16.0 ns/op
-BenchmarkPopCountByShifting-8   	30000000	        48.1 ns/op
-PASS
-ok  	github.com/linehk/BookCode/TheGoProgrammingLanguage/ch2/popcount	5.051s
+pkg: github.com/linehk/gopl/ch2/popcount
+BenchmarkPopCount-8             	2000000000	         0.37 ns/op
+BenchmarkBitCount-8             	2000000000	         0.63 ns/op
+BenchmarkPopCountByClearing-8   	100000000	        21.6 ns/op
+BenchmarkPopCountByShifting-8   	30000000	        52.7 ns/op
 */

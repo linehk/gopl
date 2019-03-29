@@ -1,8 +1,6 @@
 // Package cake provides a simulation of
 // a concurrent cake shop with numerous parameters.
-//
-// Use this command to run the benchmarks:
-// 	$ go test -bench=. gopl/ch8/cake
+// go test -bench=. gopl/ch8/cake
 package cake
 
 import (
