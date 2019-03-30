@@ -11,8 +11,10 @@ type writer struct {
 }
 
 func NewWriter(w io.Writer) io.WriteCloser {
-	// macOS
-	cmd := exec.Command("/usr/bin/bzip2")
+	// macOS /usr/bin/bzip2
+	// Linux /bin/bzip2
+	// Not for Windows
+	cmd := exec.Command("bzip2")
 
 	// 把原本发到 Stdout 的发到 w
 	cmd.Stdout = w
