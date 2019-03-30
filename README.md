@@ -1,5 +1,9 @@
 # gopl
 
+[![Build Status](https://travis-ci.org/linehk/gopl.svg?branch=master)](https://travis-ci.org/linehk/gopl))
+[![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
+[![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
+
 English | [简体中文](./README-zh_CN.md "简体中文")
 
 gopl(The Go Programming Language) is a project that contains all the sample code and all exercise answers in the [Go Programming Language] (https://www.gopl.io/ "Go Programming Language").
