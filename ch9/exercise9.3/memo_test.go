@@ -9,7 +9,7 @@ import (
 
 var httpGetBody = memotest.HTTPGetBody
 
-const timeout = 10 * time.Second
+const timeout = 1 * time.Minute
 
 func TestSequential(t *testing.T) {
 	m := New(httpGetBody)
