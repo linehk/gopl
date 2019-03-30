@@ -10,3 +10,6 @@ const (
 	ZB = EB * KB
 	YB = ZB * KB
 )
+
+func main() {
+}
