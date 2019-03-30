@@ -1,20 +1,31 @@
 # gopl
 
-## Go 程序设计语言（The Go Programming Language）
+English | [简体中文](./README-zh_CN.md "简体中文")
 
-![Go 程序设计语言](https://i.loli.net/2019/03/29/5c9e195e9d5a9.jpg "Go 程序设计语言")
+gopl(The Go Programming Language) is a project that contains all the sample code and all exercise answers in the [Go Programming Language] (https://www.gopl.io/ "Go Programming Language").
 
-ISBN: `9787111558422`
+## The Go Programming Language
 
-gopl 包含了 《[Go 程序设计语言](https://book.douban.com/subject/27044219/ "Go 程序设计语言")》 中的：
+![The Go Programming Language](https://i.loli.net/2019/03/30/5c9f2138bed41.png "The Go Programming Language")
 
-* 全部示例代码
-* 全部练习题参考答案
+ISBN: 978-0134190440
+
+## Installation
+
+```bash
+go get -u github.com/linehk/gopl
+```
 
 ## Contributing
 
-如果你觉得我的参考答案有什么需要改进的地方，欢迎发起 `Issue` 和 `Pull Request`。
+If you feel that there is something to improve my exercise answers, please feel free to launch Pull Request.
 
-## Finally
+For major changes, please open an issue first to discuss what you would like to change.
 
-`Happy Go programming, I hope you enjoy writing Go as much as I do.`
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Greetings
+
+Happy Go programming, I hope you enjoy writing Go as much as I do.
