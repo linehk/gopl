@@ -1,5 +1,8 @@
 language: go
 
+env:
+  - GO111MODULE=on
+
 install: 
   - go get ./...
 
@@ -8,5 +11,5 @@ script:
   - go vet ./...
   - go test ./...
 
-env:
-  - GO111MODULE=on
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
