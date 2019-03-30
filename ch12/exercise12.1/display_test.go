@@ -13,9 +13,9 @@ import (
 
 func TestArrayKey(t *testing.T) {
 	Display("ArrayKey", map[[3]int]string{
-		[3]int{1, 2, 3}: "123",
-		[3]int{4, 5, 6}: "456",
-		[3]int{7, 8, 9}: "789",
+		{1, 2, 3}: "123",
+		{4, 5, 6}: "456",
+		{7, 8, 9}: "789",
 	})
 }
 
