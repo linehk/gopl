@@ -27,14 +27,19 @@ func incomingURLs() <-chan string {
 	ch := make(chan string)
 	go func() {
 		for _, url := range []string{
-			"https://golang.org",
-			"https://godoc.org",
-			"https://play.golang.org",
-			"http://gopl.io",
-			"https://golang.org",
-			"https://godoc.org",
-			"https://play.golang.org",
-			"http://gopl.io",
+			// 使用中国能够访问的 URL
+			"https://www.sulinehk.com",
+			"https://www.baidu.com",
+			"https://www.taobao.com",
+			"https://www.jd.com",
+			// "https://golang.org",
+			// "https://godoc.org",
+			// "https://play.golang.org",
+			// "http://gopl.io",
+			// "https://golang.org",
+			// "https://godoc.org",
+			// "https://play.golang.org",
+			// "http://gopl.io",
 		} {
 			ch <- url
 		}

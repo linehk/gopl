@@ -101,7 +101,7 @@ func makeThumbnails6(filenames <-chan string) int64 {
 		// worker
 		go func(f string) {
 			defer wg.Done()
-			thumb, err := thumbnail.ImageFile(f)
+			thumb, err := ImageFile(f)
 			if err != nil {
 				log.Println(err)
 				return
