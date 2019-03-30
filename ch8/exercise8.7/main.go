@@ -20,6 +20,7 @@ func main() {
 	flag.Parse()
 	for _, url := range crawl(*base) {
 		wg.Add(1)
+		url := url
 		go func() {
 			defer wg.Done()
 			download(*base, url)

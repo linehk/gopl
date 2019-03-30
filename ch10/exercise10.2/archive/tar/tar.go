@@ -2,14 +2,16 @@ package tar
 
 import (
 	"archive/tar"
-	"github.com/linehk/gopl/ch10/exercise10.2/archive"
 	"io"
 	"os"
+
+	"github.com/linehk/gopl/ch10/exercise10.2/archive"
 )
 
 func init() {
 	archive.InitFormats(
-		archive.Format{"tar", "ustar\x0000", 257, list})
+		archive.Format{Name: "tar",
+			Str: "ustar\x0000", Offset: 257, List: list})
 }
 
 func list(f *os.File) ([]archive.FileHeader, error) {
@@ -24,7 +26,8 @@ func list(f *os.File) ([]archive.FileHeader, error) {
 			return nil, err
 		}
 		headers = append(headers,
-			archive.FileHeader{hdr.Name, uint64(hdr.Size)})
+			archive.FileHeader{
+				Name: hdr.Name, Size: uint64(hdr.Size)})
 	}
 	return headers, nil
 }

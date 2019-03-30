@@ -2,15 +2,18 @@ package zip
 
 import (
 	"archive/zip"
-	"github.com/linehk/gopl/ch10/exercise10.2/archive"
 	"os"
+
+	"github.com/linehk/gopl/ch10/exercise10.2/archive"
 )
 
 func init() {
 	archive.InitFormats(
-		archive.Format{"zip", "PK\x03\x04", 0, list})
+		archive.Format{Name: "zip",
+			Str: "PK\x03\x04", Offset: 0, List: list})
 	archive.InitFormats(
-		archive.Format{"zip", "PK\x05\x06", 0, list})
+		archive.Format{Name: "zip",
+			Str: "PK\x05\x06", Offset: 0, List: list})
 }
 
 func list(f *os.File) ([]archive.FileHeader, error) {
@@ -22,7 +25,8 @@ func list(f *os.File) ([]archive.FileHeader, error) {
 	defer r.Close()
 	for _, f := range r.File {
 		headers = append(headers,
-			archive.FileHeader{f.Name, f.UncompressedSize64})
+			archive.FileHeader{
+				Name: f.Name, Size: f.UncompressedSize64})
 	}
 	return headers, nil
 }

@@ -5,8 +5,12 @@ import (
 	"time"
 )
 
-func ExamplePrintDuration() {
+func PrintDuration() {
 	Print(time.Hour)
+}
+
+func ExamplePrintDuration() {
+	PrintDuration()
 	// Output:
 	// type time.Duration
 	// func (time.Duration) Hours() float64
@@ -18,8 +22,12 @@ func ExamplePrintDuration() {
 	// func (time.Duration) Truncate(time.Duration) time.Duration
 }
 
-func ExamplePrintReplacer() {
+func PrintReplacer() {
 	Print(new(strings.Replacer))
+}
+
+func ExamplePrintReplacer() {
+	PrintReplacer()
 	// Output:
 	// type *strings.Replacer
 	// func (*strings.Replacer) Replace(string) string
