@@ -11,7 +11,7 @@ import (
 // Extract makes an HTTP GET request to the specified URL, parses
 // the response as HTML, and returns the links in the HTML document.
 func Extract(url string, cancelled chan struct{}) ([]string, error) {
-	req, err := http.NewRequest(http.MethodGet, url, nil)
+	req, _ := http.NewRequest(http.MethodGet, url, nil)
 	req.Cancel = cancelled
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
