@@ -12,8 +12,10 @@ import (
 	"time"
 )
 
+var HTTPGetBody = httpGetBody
+
 func httpGetBody(url string, done <-chan struct{}) (interface{}, error) {
-	req, err := http.NewRequest(http.MethodGet, url, nil)
+	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -25,8 +27,6 @@ func httpGetBody(url string, done <-chan struct{}) (interface{}, error) {
 	defer resp.Body.Close()
 	return ioutil.ReadAll(resp.Body)
 }
-
-var HTTPGetBody = httpGetBody
 
 func incomingURLs() <-chan string {
 	ch := make(chan string)

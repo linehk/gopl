@@ -21,16 +21,21 @@ type request struct {
 	done     <-chan struct{}
 }
 
-type Memo struct{ requests chan request }
+type Memo struct {
+	requests chan request
+}
 
-// New returns a memoization of f. Clients must subsequently call Close.
+// New returns a memoization of f.
+// Clients must subsequently call Close.
 func New(f Func) *Memo {
-	memo := &Memo{requests: make(chan request)}
+	memo := &Memo{
+		requests: make(chan request),
+	}
 	go memo.server(f)
 	return memo
 }
 
-var canceledKey chan string
+var canceledKeys chan string
 
 func (memo *Memo) Get(key string, done <-chan struct{}) (interface{}, error) {
 	response := make(chan result)
@@ -38,13 +43,15 @@ func (memo *Memo) Get(key string, done <-chan struct{}) (interface{}, error) {
 	res := <-response
 	select {
 	case <-done:
-		canceledKey <- key
+		canceledKeys <- key
 	default:
 	}
 	return res.value, res.err
 }
 
-func (memo *Memo) Close() { close(memo.requests) }
+func (memo *Memo) Close() {
+	close(memo.requests)
+}
 
 func (memo *Memo) server(f Func) {
 	cache := make(map[string]*entry)
@@ -52,14 +59,17 @@ func (memo *Memo) server(f Func) {
 	LOOP:
 		for {
 			select {
-			case key := <-canceledKey:
+			case key := <-canceledKeys:
 				delete(cache, key)
 			default:
 				break LOOP
 			}
 		}
 		select {
-		case req := <-memo.requests:
+		case req, ok := <-memo.requests:
+			if !ok {
+				return
+			}
 			e := cache[req.key]
 			if e == nil {
 				// This is the first request for this key.
