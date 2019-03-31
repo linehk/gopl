@@ -1,6 +1,6 @@
 # gopl
 
-[![Build Status](https://travis-ci.org/linehk/gopl.svg?branch=master)](https://travis-ci.org/linehk/gopl))
+[![Build Status](https://travis-ci.org/linehk/gopl.svg?branch=master)](https://travis-ci.org/linehk/gopl)
 [![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
 [![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
 
