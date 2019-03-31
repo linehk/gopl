@@ -9,7 +9,7 @@ import (
 )
 
 func TestConcurrencyBzip2(t *testing.T) {
-	workers := 1000000
+	workers := 8000
 
 	var uncompressed bytes.Buffer
 	for i := 0; i < workers; i++ {
@@ -39,8 +39,8 @@ func TestConcurrencyBzip2(t *testing.T) {
 	}
 
 	// Check the size of the compressed stream.
-	if got, want := compressed.Len(), 255; got != want {
-		t.Errorf("1 million hellos compressed to %d bytes, want %d", got, want)
+	if got, want := compressed.Len(), 49; got != want {
+		t.Errorf("8000 hellos compressed to %d bytes, want %d", got, want)
 	}
 
 	// Decompress and compare with original.
