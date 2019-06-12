@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
 [![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
 
-[English](./README.md "Englist") | 简体中文
+[English](./README.md "English") | 简体中文
 
 gopl（The Go Programming Language）是一个包含了 《[Go 程序设计语言](https://book.douban.com/subject/27044219/ "Go 程序设计语言")》 中全部示例代码和全部练习题参考答案的项目。
 
