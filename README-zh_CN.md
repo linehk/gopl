@@ -34,7 +34,7 @@ go get -u github.com/linehk/gopl
 
 ## 开源许可证
 
-[MIT](https://choosealicense.com/licenses/mit/ "MIT")
+[MIT License](./LICENSE "MIT License")
 
 ## 祝语
 
