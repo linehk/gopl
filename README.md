@@ -17,6 +17,12 @@ ISBN: 978-0134190440
 ## Installation
 
 ```bash
+git clone https://github.com/linehk/gopl.git
+```
+
+Or:
+
+```bash
 go get -u github.com/linehk/gopl
 ```
 

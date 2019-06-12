@@ -17,6 +17,12 @@ ISBN: 978-7111558422
 ## 安装
 
 ```bash
+git clone https://github.com/linehk/gopl.git
+```
+
+或者：
+
+```bash
 go get -u github.com/linehk/gopl
 ```
 
