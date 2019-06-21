@@ -20,12 +20,6 @@ ISBN: 978-7111558422
 git clone https://github.com/linehk/gopl.git
 ```
 
-或者：
-
-```bash
-go get -u github.com/linehk/gopl
-```
-
 ## 参与贡献
 
 如果你觉得我的参考答案有什么需要改进的地方，欢迎发起 Pull Request。
