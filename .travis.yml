@@ -1,15 +1,18 @@
 language: go
 
-env:
-  - GO111MODULE=on
+env: GO111MODULE=on
 
-install: 
-  - go get ./...
+git: 
+  depth: 1
+
+install: true
+
+# before_script:
+#  - wget -O - -q https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s v1.17.1
 
 script:
-  - go fmt ./...
-  - go vet ./...
-  - go test -race -coverprofile=coverage.txt -covermode=atomic ./...
+#  - ./bin/golangci-lint run
+  - go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
