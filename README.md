@@ -26,6 +26,10 @@ git clone https://github.com/linehk/gopl.git
 
 如果有重大变化，请先打开一个 Issue，讨论您想要改变的内容。
 
+## 开源许可证
+
+[MIT License](./LICENSE "MIT License")
+
 ## 祝语
 
 Happy Go programming, I hope you enjoy writing Go as much as I do.

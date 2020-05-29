@@ -26,6 +26,10 @@ If you feel that there is something to improve my exercise answers, please feel 
 
 For major changes, please open an issue first to discuss what you would like to change.
 
+## License
+
+[MIT License](./LICENSE "MIT License")
+
 ## Greetings
 
 Happy Go programming, I hope you enjoy writing Go as much as I do.
