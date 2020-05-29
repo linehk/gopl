@@ -26,10 +26,6 @@ If you feel that there is something to improve my exercise answers, please feel 
 
 For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flinehk%2Fgopl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flinehk%2Fgopl?ref=badge_large)
-
 ## Greetings
 
 Happy Go programming, I hope you enjoy writing Go as much as I do.

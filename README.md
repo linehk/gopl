@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/linehk/gopl.svg?branch=master)](https://travis-ci.org/linehk/gopl)
 [![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
 [![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flinehk%2Fgopl.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flinehk%2Fgopl?ref=badge_shield)
 
 [English](./README-en.md "English") | 简体中文
 
@@ -27,13 +26,6 @@ git clone https://github.com/linehk/gopl.git
 
 如果有重大变化，请先打开一个 Issue，讨论您想要改变的内容。
 
-## 开源许可证
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flinehk%2Fgopl.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flinehk%2Fgopl?ref=badge_large)
-
 ## 祝语
 
 Happy Go programming, I hope you enjoy writing Go as much as I do.
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flinehk%2Fgopl.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flinehk%2Fgopl?ref=badge_large)
