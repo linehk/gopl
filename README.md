@@ -4,32 +4,32 @@
 [![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
 [![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
 
-[English](./README-en.md "English") | 简体中文
+English | [简体中文](./README-zh.md "简体中文")
 
-gopl（The Go Programming Language）是一个包含了 《[Go 程序设计语言](https://book.douban.com/subject/27044219/ "Go 程序设计语言")》 中全部示例代码和全部练习题参考答案的项目。
+gopl(The Go Programming Language) is a project that contains all the sample code and all exercise answers in the [Go Programming Language](https://www.gopl.io "Go Programming Language").
 
-## Go 程序设计语言
+## The Go Programming Language
 
-![Go 程序设计语言](https://i.loli.net/2019/03/29/5c9e195e9d5a9.jpg "Go 程序设计语言")
+![The Go Programming Language](./en-cover.png "The Go Programming Language")
 
-ISBN: 978-7111558422
+ISBN: 978-0134190440
 
-## 安装
+## Installation
 
 ```bash
 git clone https://github.com/linehk/gopl.git
 ```
 
-## 参与贡献
+## Contributing
 
-如果你觉得我的参考答案有什么需要改进的地方，欢迎发起 Pull Request。
+If you feel that there is something to improve my exercise answers, please feel free to launch Pull Request.
 
-如果有重大变化，请先打开一个 Issue，讨论您想要改变的内容。
+For major changes, please open an issue first to discuss what you would like to change.
 
-## 开源许可证
+## License
 
 [MIT License](./LICENSE "MIT License")
 
-## 祝语
+## Greetings
 
 Happy Go programming, I hope you enjoy writing Go as much as I do.
