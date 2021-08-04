@@ -1,0 +1,19 @@
+on: [push]
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ['ubuntu-latest', 'macos-latest']
+        go: ['1.12', '1.13']
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-go@v2
+      with:
+        go-version: ${{ matrix.go }}
+    - run:
+        go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
+    - uses: codecov/codecov-action@v2
+      with:
+        file: ./coverage.txt
+        verbose: true
