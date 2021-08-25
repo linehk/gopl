@@ -20,6 +20,7 @@ func replace(b []byte) []byte {
 			if unicode.IsSpace(second) {
 				copy(b[i:], b[i+size:])
 				b = b[:len(b)-size]
+				continue
 			}
 		}
 		i += size
