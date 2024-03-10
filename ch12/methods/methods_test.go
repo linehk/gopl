@@ -13,7 +13,10 @@ func ExamplePrintDuration() {
 	PrintDuration()
 	// Output:
 	// type time.Duration
+	// func (time.Duration) Abs() time.Duration
 	// func (time.Duration) Hours() float64
+	// func (time.Duration) Microseconds() int64
+	// func (time.Duration) Milliseconds() int64
 	// func (time.Duration) Minutes() float64
 	// func (time.Duration) Nanoseconds() int64
 	// func (time.Duration) Round(time.Duration) time.Duration

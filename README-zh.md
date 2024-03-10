@@ -17,6 +17,7 @@ ISBN: 978-7111558422
 ## 安装
 
 ```bash
+apt-get install libbz2-dev
 git clone https://github.com/linehk/gopl.git
 ```
 
