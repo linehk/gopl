@@ -1,7 +1,8 @@
 # gopl
 
-[![codecov](https://codecov.io/gh/linehk/gopl/branch/master/graph/badge.svg)](https://codecov.io/gh/linehk/gopl)
-[![Go Report Card](https://goreportcard.com/badge/github.com/linehk/gopl)](https://goreportcard.com/report/github.com/linehk/gopl)
+[![build](https://github.com/linehk/gopl/actions/workflows/build.yml/badge.svg "build")](https://github.com/linehk/gopl/actions)
+[![codecov](https://codecov.io/gh/linehk/gopl/graph/badge.svg "codecov")](https://codecov.io/gh/linehk/gopl)
+[![go report](https://goreportcard.com/badge/github.com/linehk/gopl "go report")](https://goreportcard.com/report/github.com/linehk/gopl)
 
 English | [简体中文](./README-zh.md "简体中文")
 
