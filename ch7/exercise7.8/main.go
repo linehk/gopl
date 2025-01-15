@@ -33,41 +33,26 @@ func click(t string) {
 		sort.Stable(custom{tracks,
 			func(x, y *Track) bool {
 				return x.Title < y.Title
-			},
-			func(x, y *Track) {
-				x.Title, y.Title = y.Title, x.Title
 			}})
 	case "artist":
 		sort.Stable(custom{tracks,
 			func(x, y *Track) bool {
 				return x.Artist < y.Artist
-			},
-			func(x, y *Track) {
-				x.Artist, y.Artist = y.Artist, x.Artist
 			}})
 	case "album":
 		sort.Stable(custom{tracks,
 			func(x, y *Track) bool {
 				return x.Album < y.Album
-			},
-			func(x, y *Track) {
-				x.Album, y.Album = y.Album, x.Album
 			}})
 	case "year":
 		sort.Stable(custom{tracks,
 			func(x, y *Track) bool {
 				return x.Year < y.Year
-			},
-			func(x, y *Track) {
-				x.Year, y.Year = y.Year, x.Year
 			}})
 	case "length":
 		sort.Stable(custom{tracks,
 			func(x, y *Track) bool {
 				return int64(x.Length) < int64(y.Length)
-			},
-			func(x, y *Track) {
-				x.Length, y.Length = y.Length, x.Length
 			}})
 	}
 }
@@ -75,12 +60,11 @@ func click(t string) {
 type custom struct {
 	t    []*Track
 	less func(x, y *Track) bool
-	swap func(x, y *Track)
 }
 
 func (x custom) Len() int           { return len(x.t) }
 func (x custom) Less(i, j int) bool { return x.less(x.t[i], x.t[j]) }
-func (x custom) Swap(i, j int)      { x.swap(x.t[i], x.t[j]) }
+func (x custom) Swap(i, j int)      { x.t[i], x.t[j] = x.t[j], x.t[i] }
 
 type Track struct {
 	Title  string
